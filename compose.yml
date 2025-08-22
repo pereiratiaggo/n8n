@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     restart: unless-stopped
     ports:
-      - "5678:5678"
+      - "${PORT_TO_EXPOSE}:${N8N_PORT}"
     env_file:
       - .env
     volumes:
